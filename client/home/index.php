@@ -19,7 +19,7 @@
             ?>
         </div>
         <div class="border border-white rounded-md px-5 py-2 bg-[#6e48aa] hover:bg-[#9d50bb]">
-            <a href="">Sair</a>
+            <a href="../../server/src/logout-route.php">Sair</a>
         </div>
     </header>
 </body>
