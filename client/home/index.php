@@ -46,7 +46,7 @@
                     </a>
                     <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
                         <span>
-                            Ver horários de chegada passados
+                            Ver horários de chegada
                         </span>
                     </a>
                 </div>
