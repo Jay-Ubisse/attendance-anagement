@@ -22,5 +22,13 @@
             <a href="../../server/src/logout-route.php">Sair</a>
         </div>
     </header>
+    <main >
+        <section class="">
+            <h1>DASHBOARD</h1>
+        </section>
+    </main>
+    <footer class="bg-[#9d50bb] text-white text-center fixed bottom-0 py-2 w-full">
+        <p>&copy; Todos os direitos reservados. Desenvolvido por <strong><a href="https://jay-ubisse.com" target="_blank">Jay Ubisse</a></strong></p>
+    </footer>
 </body>
 </html>
