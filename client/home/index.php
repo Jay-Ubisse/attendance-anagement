@@ -22,9 +22,35 @@
             <a href="../../server/src/logout-route.php">Sair</a>
         </div>
     </header>
-    <main >
-        <section class="">
-            <h1>DASHBOARD</h1>
+    <main class="bg-gray-200 p-1 h-[calc(100vh-100px)]">
+        <section class="bg-white w-9/12 h-5/6 mx-auto mt-10 p-6 rounded-lg">
+            <h1 class="text-[#9d50bb] text-xl font-semibold border-b border-[#9d50bb] w-fit">DASHBOARD</h1>
+            <div class="flex flex-col gap-2 m-3 mt-6 h-5/6">
+                <div class="flex flex-row gap-2 h-1/2">
+                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                        <span>
+                            Registar funcionário
+                        </span>
+                    </a>
+                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                        <span>
+                            Registar horário de chegada
+                        </span>
+                    </a>
+                </div>
+                <div class="flex flex-row gap-2 h-1/2">
+                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                        <span>
+                            Ver lista de funcionários
+                        </span>
+                    </a>
+                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                        <span>
+                            Ver horários de chegada passados
+                        </span>
+                    </a>
+                </div>
+            </div>
         </section>
     </main>
     <footer class="bg-[#9d50bb] text-white text-center fixed bottom-0 py-2 w-full">
