@@ -27,7 +27,7 @@
             <h1 class="text-[#9d50bb] text-xl font-semibold border-b border-[#9d50bb] w-fit">DASHBOARD</h1>
             <div class="flex flex-col gap-2 m-3 mt-6 h-5/6">
                 <div class="flex flex-row gap-2 h-1/2">
-                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                    <a href="../register/" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
                         <span>
                             Registar funcionário
                         </span>
