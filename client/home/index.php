@@ -22,7 +22,7 @@
             <a href="../../server/src/logout-route.php">Sair</a>
         </div>
     </header>
-    <main class="bg-gray-200 p-1 h-[calc(100vh-100px)]">
+    <main class="bg-gray-200 p-1 h-[calc(100vh-100px)] overflow-scroll">
         <section class="bg-white w-9/12 h-5/6 mx-auto mt-10 p-6 rounded-lg">
             <h1 class="text-[#9d50bb] text-xl font-semibold border-b border-[#9d50bb] w-fit">DASHBOARD</h1>
             <div class="flex flex-col gap-2 m-3 mt-6 h-5/6">
