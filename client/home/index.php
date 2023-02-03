@@ -39,7 +39,7 @@
                     </a>
                 </div>
                 <div class="flex flex-row gap-2 h-1/2">
-                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                    <a href="../employees-list/" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
                         <span>
                             Ver lista de funcionários
                         </span>
