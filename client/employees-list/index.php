@@ -36,13 +36,23 @@
         <section class="border-2 rounded-md border-[#6e48aa] max-h-[300px] p-4 w-[23%] mt-10">
             <label for="filter" class="text-lg font-semibold">Filtrar por:</label>
             <hr class="w-20 bg-[#6e48aa] h-[3px] mb-3 mt-1 font-extrabold rounded" />
-            <select name="fiter" id="cars">
+            <select onchange="filterOptions()" name="filter" id="filter" class="outline-none focus:outline-[#6e48aa]">
                 <option value="name">Nome</option>
                 <option value="start-date">Data de Início</option>
-                <option value="cell">Número de celular</option>
+                <option value="phone">Número de celular</option>
+                <option value="all">Todos</option>
             </select>
-            <div class="mt-4">
-                    
+            <div id="name-form" class="mt-10 flex flex-col gap-4">
+                <input type="text" id="name" class="h-8 rounded-md outline-none focus:outline-[#6e48aa] px-2">
+                <button class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
+            </div>
+            <div id="date-form" class="mt-10 flex flex-col gap-4">
+                <input type="date" id="date" class="h-8 rounded-md outline-none focus:outline-[#6e48aa] px-2">
+                <button class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
+            </div>
+            <div id="phone-form" class="mt-10 flex flex-col gap-4">
+                <input type="number" id="phone" class="h-8 rounded-md outline-none focus:outline-[#6e48aa] px-2">
+                <button class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
             </div>
         </section>
     </main>
@@ -52,7 +62,46 @@
 
     <script src="../assets/scripts/jquery-3.6.0.js"></script>
     <script>
+        //load table of all employees
         $("#all").load("../../server/src/all-employees.php");
+        function loadAll() {
+            $("#all").load("../../server/src/all-employees.php");
+        }
+
+        //code for filter form
+        $('#name-form').show();
+        $('#date-form').hide();
+        $('#phone-form').hide();
+        
+        function filterOptions() {
+            var filterVal = $("#filter").val();
+
+            switch (filterVal) {
+                case "name":
+                    $('#name-form').show();
+                    $('#date-form').hide();
+                    $('#phone-form').hide();
+                    break;
+                case "start-date":
+                    $('#name-form').hide();
+                    $('#date-form').show();
+                    $('#phone-form').hide();
+                    break;
+                case "phone":
+                    $('#name-form').hide();
+                    $('#date-form').hide();
+                    $('#phone-form').show();
+                    break;
+                case "all":
+                    $('#name-form').show();
+                    $('#date-form').hide();
+                    $('#phone-form').hide();
+                    $("#all").load("../../server/src/all-employees.php");
+                default:
+                    break;
+        }
+        }
+
     </script>
 </body>
 </html>
