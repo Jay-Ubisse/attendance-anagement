@@ -44,15 +44,15 @@
             </select>
             <div id="name-form" class="mt-10 flex flex-col gap-4">
                 <input type="text" id="name" class="h-8 rounded-md outline-none focus:outline-[#6e48aa] px-2">
-                <button class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
+                <button onclick="loadByName()" class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
             </div>
             <div id="date-form" class="mt-10 flex flex-col gap-4">
                 <input type="date" id="date" class="h-8 rounded-md outline-none focus:outline-[#6e48aa] px-2">
-                <button class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
+                <button onclick="loadByDate()" class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
             </div>
             <div id="phone-form" class="mt-10 flex flex-col gap-4">
                 <input type="number" id="phone" class="h-8 rounded-md outline-none focus:outline-[#6e48aa] px-2">
-                <button class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
+                <button onclick="loadByPhone()" class="w-fit px-4 py-2 bg-[#6e48aa] text-white rounded-md">Pesquisar</button>    
             </div>
         </section>
     </main>
@@ -64,9 +64,25 @@
     <script>
         //load table of all employees
         $("#all").load("../../server/src/all-employees.php");
-        function loadAll() {
-            $("#all").load("../../server/src/all-employees.php");
+
+        //load table of employees by name
+        function loadByName() {
+            let name = $("#name").val();
+            $("#all").load("../../server/src/employees-by-name.php", {data: name});
         }
+
+         //load table of employees by start-date
+        function loadByDate() {
+            let date = $("#date").val();
+            $("#all").load("../../server/src/employees-by-start-date.php", {data: date});
+        }
+
+         //load table of employees by phone number
+        function loadByPhone() {
+            let phoneNumber = $("#phone").val();
+            $("#all").load("../../server/src/employees-by-phone.php", {data: phoneNumber});
+        }
+
 
         //code for filter form
         $('#name-form').show();
