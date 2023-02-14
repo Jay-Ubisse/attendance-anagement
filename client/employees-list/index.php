@@ -1,9 +1,5 @@
 <?php
-    require "../../server/config/connect.php";
-    session_start();
-
-    $sql = "SELECT * FROM employees ORDER BY name";
-    $result = $dbcon->query($sql);
+   session_start();
 ?>
 
 <!DOCTYPE html>
@@ -33,36 +29,8 @@
     </header>
     <main class="bg-gray-200 p-1 h-[calc(100vh-100px)] flex flex-row gap-4">
         <section class="mt-10 ml-10 w-[75%]">
-            <table class="border-collapse border-2 border-[#6e48aa]">
-                <tr>
-                    <th class="border-collapse border-2 border-[#6e48aa] p-2">Nº</th>
-                    <th class="border-collapse border-2 border-[#6e48aa] py-2 px-5">Nome</th>
-                    <th class="border-collapse border-2 border-[#6e48aa] py-2 px-5">Data de Início</th>
-                    <th class="border-collapse border-2 border-[#6e48aa] py-2 px-5">Número de celular</th>
-                    <th class="border-collapse border-2 border-[#6e48aa] py-2 px-5">Endereço</th>
-                    <th class="border-collapse border-2 border-[#6e48aa] py-2 px-5">Data de Nascimento</th>
-                </tr>
-                <?php
-                    $index = 1;
-                    if ($result->num_rows > 0) {
-                        while($row = $result->fetch_assoc()) {
-                ?>
-                <tr>
-                    <td class="border-collapse border-2 border-[#6e48aa] p-2"><?php echo $index; ?></td>
-                    <td class="border-collapse border-2 border-[#6e48aa] py-2 px-5"><?php echo $row["name"]; ?></td>
-                    <td class="border-collapse border-2 border-[#6e48aa] py-2 px-5"><?php echo $row["start_date"]; ?></td>
-                    <td class="border-collapse border-2 border-[#6e48aa] py-2 px-5"><?php echo $row["phone"];  ?></td>
-                    <td class="border-collapse border-2 border-[#6e48aa] py-2 px-5"><?php echo $row["address"];  ?></td>
-                    <td class="border-collapse border-2 border-[#6e48aa] py-2 px-5"><?php echo $row["birth_date"];  ?></td>
-                </tr>
-                <?php
-                    $index = $index + 1;        
-                    } 
-                    } else {
-                        echo "Nenhum resultado.";
-                    }
-                    $dbcon->close();
-                ?>
+            <table id="all" class="border-collapse border-2 border-[#6e48aa]">
+                
             </table>
         </section>
         <section class="border-2 rounded-md border-[#6e48aa] max-h-[300px] p-4 w-[23%] mt-10">
@@ -74,12 +42,17 @@
                 <option value="cell">Número de celular</option>
             </select>
             <div class="mt-4">
-
+                    
             </div>
         </section>
     </main>
     <footer class="bg-[#9d50bb] text-white text-center fixed bottom-0 py-2 w-full">
         <p>&copy; Todos os direitos reservados. Desenvolvido por <strong><a href="https://jay-ubisse.com" target="_blank">Jay Ubisse</a></strong></p>
     </footer>
+
+    <script src="../assets/scripts/jquery-3.6.0.js"></script>
+    <script>
+        $("#all").load("../../server/src/all-employees.php");
+    </script>
 </body>
 </html>
