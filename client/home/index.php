@@ -32,7 +32,7 @@
                             Registar funcionário
                         </span>
                     </a>
-                    <a href="#" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
+                    <a href="../daily-presence/" class="border-2 border-[#9d50bb] rounded-md w-[50%] h-full flex justify-center items-center text-[#9d50bb] text-xl font-bold hover:bg-[#9d50bb] hover:text-white">
                         <span>
                             Registar horário de chegada
                         </span>

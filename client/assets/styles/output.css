@@ -637,6 +637,11 @@ video {
   height: 80%;
 }
 
+.h-fit {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 .max-h-\[300px\] {
   max-height: 300px;
 }
