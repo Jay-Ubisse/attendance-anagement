@@ -68,7 +68,7 @@
                     </tr>
                     <tr>
                         <td class="p-3 text-base font-semibold">
-                            Horário de entrada
+                            Hora marcada
                         </td>
                         <td>
                         <input type="time" name="entry_time" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
@@ -80,6 +80,14 @@
                         </td>
                         <td>
                         <input type="time" name="arrival_time" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 text-base font-semibold">
+                            Local de trabalho
+                        </td>
+                        <td>
+                        <textarea name="workplace" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]"></textarea>
                         </td>
                     </tr>
                     <tr>
