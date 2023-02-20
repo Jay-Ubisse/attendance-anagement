@@ -40,7 +40,7 @@
 				?>
 		</div>
         <section class="bg-white w-1/2 h-fit mx-auto mt-5 p-6 rounded-lg">
-            <form method="post" action="../../server/src/register.php">
+            <form method="post" action="../../server/src/daily-presence.php" enctype="multipart/form-data">
                 <table class="w-11/12 mx-auto">
                     <tr>
                         <td class="p-3 text-base font-semibold">
@@ -55,7 +55,7 @@
                             Foto
                         </td>
                         <td class="p-3">
-                            <input type="file" name="name" size="30" autocomplete="off" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
+                            <input type="file" name="image" size="30" autocomplete="off" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
                         </td>
                     </tr>
                     <tr>
@@ -63,7 +63,15 @@
                             Data
                         </td>
                         <td class="p-3">
-                            <input type="date" name="birth_date" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
+                            <input type="date" name="work_day" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="p-3 text-base font-semibold">
+                            Horário de entrada
+                        </td>
+                        <td>
+                        <input type="time" name="entry_time" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
                         </td>
                     </tr>
                     <tr>
@@ -71,7 +79,7 @@
                             Hora de chegada
                         </td>
                         <td>
-                        <input type="time" name="start_date" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
+                        <input type="time" name="arrival_time" required class="bg-slate-300 px-2 rounded-sm outline-[#6e48aa]" />
                         </td>
                     </tr>
                     <tr>
@@ -84,7 +92,7 @@
                     </tr>
                 </table>
                 <div class="mt-5 w-fit mx-auto">
-                    <input type="submit" value="Cadastrar" class="bg-[#6e48aa] text-white font-medium px-3 py-2 rounded" />
+                    <input type="submit" value="Registrar" class="bg-[#6e48aa] text-white font-medium px-3 py-2 rounded" />
                     <input type="reset" value="Repor" class="border border-[#6e48aa] text-[#6e48aa] font-medium px-6 py-2 rounded" />
                 </div>
             </form>
