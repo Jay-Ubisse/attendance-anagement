@@ -27,15 +27,15 @@
             </div>
         </div>
     </header>
-    <main class="bg-gray-200 p-1 h-[calc(100vh-100px)]">
+    <main class="bg-gray-200 p-1 h-[calc(100vh)]">
         <div class="w-1/2 mx-auto mt-3 py-3 border-2 border-[#9d50bb] rounded-md text-center text-lg font-bold">
             Registar horário de chegada
         </div>
         <div class="bg-[#6e48aa] text-white font-semibold flex justify-center my-4">
 				<?php
-					if(isset($_SESSION["message"]) ) {
-						echo $_SESSION["message"];
-						unset($_SESSION["message"]);
+					if(isset($_SESSION["info"]) ) {
+						echo $_SESSION["info"];
+						unset($_SESSION["info"]);
 					} 
 				?>
 		</div>
